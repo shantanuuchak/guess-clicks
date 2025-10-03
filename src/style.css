@@ -41,6 +41,17 @@ body {
   background-color: #f5f1dc;
 }
 
+.background-win {
+  background: linear-gradient(rgb(21, 255, 0), rgb(35, 205, 75));
+}
+
+.background-lose {
+  background: linear-gradient(
+    rgba(239, 33, 67, 0.769),
+    rgba(243, 31, 35, 0.792)
+  );
+}
+
 main {
   min-width: 100%;
   min-height: 100vh;
@@ -49,10 +60,6 @@ main {
   align-items: center;
   flex-direction: column;
   gap: 3rem;
-}
-
-main h1 {
-  color: #222;
 }
 
 button {

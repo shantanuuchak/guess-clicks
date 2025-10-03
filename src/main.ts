@@ -32,17 +32,20 @@ function refreshGame(text = 'retry') {
     userBtn?.addEventListener('click', () => {
         location.reload()
     })
+    main?.classList.remove('background-win');
+    main?.classList.remove('background-lose');
 }
 
 startGame()
     .then(() => {
         title.textContent = "you gussed it right!"
         titleEl.textContent = "you gussed it right!"
+        main?.classList.add('background-win')
         refreshGame('win again')
     })
     .catch(() => {
         title.textContent = 'a retry won\'t hurt!'
         titleEl.textContent = 'a retry won\'t hurt!'
-        refreshGame()
-
+        main?.classList.add('background-lose')
+        refreshGame('play again')
     })
