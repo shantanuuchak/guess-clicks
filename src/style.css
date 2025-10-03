@@ -47,6 +47,12 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+main h1 {
+  color: #222;
 }
 
 button {
@@ -57,4 +63,30 @@ button {
   border-radius: 0.5rem;
   border: none;
   cursor: pointer;
+}
+
+.pressed {
+  .button {
+    padding: 15px 30px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 6px #9c9;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: #3e8e41;
+    }
+
+    &:active {
+      background-color: #3e8e41;
+      box-shadow: 0 2px #696;
+      transform: translateY(4px);
+    }
+  }
 }
