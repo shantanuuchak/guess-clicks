@@ -6,6 +6,8 @@ const title = document.querySelector('title');
 const titleEl = document.querySelector('.title');
 const userBtn = document.querySelector('button');
 
+console.log(main)
+
 // === Game Logic ===
 function startGame() {
     const secretValue = 5;
@@ -39,13 +41,13 @@ function refreshGame(text = 'retry') {
 startGame()
     .then(() => {
         title.textContent = "you gussed it right!"
+        main.classList.add('background-win')
         titleEl.textContent = "you gussed it right!"
-        main?.classList.add('background-win')
         refreshGame('win again')
     })
     .catch(() => {
         title.textContent = 'a retry won\'t hurt!'
-        titleEl.textContent = 'a retry won\'t hurt!'
         main?.classList.add('background-lose')
+        titleEl.textContent = 'a retry won\'t hurt!'
         refreshGame('play again')
     })
